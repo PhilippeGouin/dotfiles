@@ -1,4 +1,4 @@
-.bash
+bash
 =====
 
 My bash settings
