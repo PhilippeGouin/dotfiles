@@ -1,4 +1,4 @@
-bash
-=====
+Dotfile
+=======
 
-My bash settings
+My dotfiles
