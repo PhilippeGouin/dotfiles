@@ -19,11 +19,11 @@ fi
 #------------------------------------------------------------------
 export PATH=$HOME/.local/bin:$PATH
 export EDITOR=vim  # used at least by crontab -e
-export http_proxy='http://direct.proxy.i2:8080'
-export https_proxy='http://direct.proxy.i2:8080'
-export ftp_proxy='ftp://direct.proxy.i2'
+#export http_proxy='http://direct.proxy.i2:8080'
+#export https_proxy='http://direct.proxy.i2:8080'
+#export ftp_proxy='ftp://direct.proxy.i2'
 
 #------------------------------------------------------------------
 # Defragmentation des bases sqlite de Firefox
 #------------------------------------------------------------------
-for f in ~/.mozilla/firefox/*/*.sqlite; do sqlite3 $f "VACUUM;" 2>/dev/null; done
+#for f in ~/.mozilla/firefox/*/*.sqlite; do sqlite3 $f "VACUUM;" 2>/dev/null; done
