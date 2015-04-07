@@ -1,0 +1,48 @@
+# Per-repository configuration options that only apply in a particular
+# repository. This file is not version-controlled, and will not get transferred
+# during a "clone" operation. Options in this file override options in all other
+# configuration files.
+
+[ui]
+username = Philippe Gouin <philippe.gouin@...>
+# verbose = True
+editor = vim
+merge = vimdiff
+#merge = kdiff3
+ssh = ssh -C
+
+# [auth]
+# ssh keys are more secure !
+# bitbucket.schemes = http https
+# bitbucket.prefix = bitbucket.org
+# bitbucket.username = <usr>
+# bitbucket.password = <pwd>
+
+[alias]
+#untrack = rm -Af  # Steve Losh
+log = log -G -l 6
+
+[paths]
+default = ssh://hg@bitbucket.org/<usr>/<repo>
+default-push = ssh://hg@bitbucket.org/<usr>/<repo>
+bitbucket = ssh://hg@bitbucket.org/<usr>/<repo>
+
+[merge-tools]
+# http://mercurial.selenic.com/wiki/MergingWithVim
+vimdiff.executable = vimdiff
+vimdiff.args = -f -d $output -M $local $base $other -c "wincmd J" -c "set modifiable" -c "set write"
+vimdiff.premerge = keep
+# kdiff3.args = --L1 base --L2 local --L3 other $base $local $other -o $output
+
+[extensions]
+# base extensions
+graphlog =
+color =
+progress =
+pager =
+progress =
+shelve =
+# hgext.extdiff = # required with kdiff3 merge tool
+
+# [extdiff]
+# cmd.kdiff3 =
